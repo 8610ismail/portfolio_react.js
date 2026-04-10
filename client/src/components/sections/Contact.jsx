@@ -14,9 +14,8 @@ const Contact = () => {
     setStatus('loading');
     
     try {
-      // Use environment variable for API URL in production
-      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-      const response = await axios.post(`${API_URL}/contact`, formData);
+      // Use relative path for Vercel compatibility
+      const response = await axios.post('/api/contact', formData);
       if (response.data.success) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
