@@ -75,7 +75,7 @@ const Projects = () => {
       link: "https://ismailapple.netlify.app/"
     },
     {
-      name: "Hemasree Music",
+      name: "Ismail Music",
       category: "web",
       stack: ["HTML", "CSS", "JS"],
       desc: "Elegant music player with playlist management and custom audio controls.",
