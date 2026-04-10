@@ -100,11 +100,18 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="p-8 md:p-12 glass rounded-[2.5rem] border-white/5 card-gradient relative overflow-hidden shadow-2xl"
           >
             {/* Form */}
             <form onSubmit={handleSubmit} className="relative z-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"
+              >
                 <div>
                   <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-3 ml-1">Full Name</label>
                   <input
@@ -127,9 +134,15 @@ const Contact = () => {
                     className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-secondary transition-all font-medium"
                   />
                 </div>
-              </div>
+              </motion.div>
               
-              <div className="mb-8">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="mb-8"
+              >
                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-3 ml-1">Your Message</label>
                 <textarea
                   required
@@ -139,13 +152,17 @@ const Contact = () => {
                   placeholder="What's on your mind?"
                   className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-secondary transition-all resize-none font-medium"
                 ></textarea>
-              </div>
+              </motion.div>
 
               <motion.button
                 type="submit"
                 disabled={status === 'loading'}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
                 className={`w-full py-4 rounded-2xl flex items-center justify-center gap-3 font-black text-lg transition-all shadow-xl
                   ${status === 'loading' ? 'bg-slate-700 cursor-not-allowed' : 'bg-secondary hover:bg-secondary/90 text-slate-950 shadow-secondary/20'}
                 `}
