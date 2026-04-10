@@ -58,7 +58,7 @@ const Projects = () => {
     {
       name: "Robo Connect",
       category: "mobile",
-      stack: ["Flutter", "WebSockets"],
+      stack: ["Android", "Kotlin","MVVM"],
       desc: "Provided specialized debugging support for the Robo Mate+ module and supported the development team during peak release cycles.",
       image: roboConnectImg,
       role: "Debugging Support",
@@ -68,7 +68,7 @@ const Projects = () => {
     {
       name: "Apple TV Clone",
       category: "web",
-      stack: ["React", "Tailwind", "Framer"],
+      stack: ["HTML", "CSS",],
       desc: "High-fidelity clone of the Apple TV interface with smooth transitions and premium UI.",
       image: appleCloneImg,
       role: "Lead Developer",
