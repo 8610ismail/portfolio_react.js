@@ -41,27 +41,27 @@ const Projects = () => {
       name: "Onojo",
       category: "mobile",
       stack: ["Flutter", "Clean Architecture"],
-      desc: "Service provider platform for Japanese market with custom Japanese aesthetics.",
+      desc: "Japanese market service provider. Provided critical team support for Screens",
       image: onojoImg,
-      role: "Lead Developer",
+      role: "Team Support",
       link: "#"
     },
     {
       name: "Robo Mate+",
       category: "mobile",
       stack: ["Android", "Kotlin", "MVVM"],
-      desc: "Educational companion app for students with interactive modules and LMS integration.",
+      desc: "Provided specialized debugging support for the Robo Mate+ module and supported the development team during peak release cycles.",
       image: roboMateImg,
-      role: "Android Developer",
+      role: "Debugging Support",
       link: "#"
     },
     {
       name: "Robo Connect",
       category: "mobile",
       stack: ["Flutter", "WebSockets"],
-      desc: "Real-time communication bridge for educational institutions and parents.",
+      desc: "Provided specialized debugging support for the Robo Mate+ module and supported the development team during peak release cycles.",
       image: roboConnectImg,
-      role: "Mobile Architect",
+      role: "Debugging Support",
       link: "#"
     },
     // Web Projects
@@ -211,10 +211,11 @@ const Projects = () => {
               <motion.div
                 key={project.name}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="glass rounded-3xl overflow-hidden border-white/5 group hover:border-secondary/30 transition-all card-gradient flex flex-col h-full shadow-2xl"
               >
                 <div className="relative h-52 overflow-hidden bg-slate-800">
