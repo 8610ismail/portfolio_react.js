@@ -14,8 +14,9 @@ const Contact = () => {
     setStatus('loading');
     
     try {
-      // In production, this would be your actual endpoint (e.g., https://api.yoursite.com/contact)
-      const response = await axios.post('http://localhost:5000/contact', formData);
+      // Use environment variable for API URL in production
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await axios.post(`${API_URL}/contact`, formData);
       if (response.data.success) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
