@@ -22,7 +22,7 @@ const Skills = () => {
     {
       title: "Professional Suite",
       icon: <Terminal className="text-secondary" size={24} />,
-      skills: ["Git / GitHub", "Android Studio", "VS Code", "Postman", "CI/CD Pipeline", "Docker", "DevOps Basics"]
+      skills: ["Git / GitHub", "Android Studio", "VS Code", "Postman", "CI/CD Pipeline", "DevOps Basics"]
     }
   ];
 
