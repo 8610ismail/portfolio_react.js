@@ -4,7 +4,7 @@ A professional, high-performance portfolio website for a Flutter & Android Devel
 
 ## 🚀 Built With
 - **Frontend**: React.js, Tailwind CSS, Framer Motion, Lucide React
-- **Backend**: Node.js, Express, Nodemailer, CORS
+- **Backend**: Nodemailer, CORS
 - **Design**: Premium glassmorphism dark mode, mobile-first responsive design
 
 ## 📁 Project Structure
